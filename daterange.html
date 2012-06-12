@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/static/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="/static/jquery-ui-1.7.2/ui.core.js"></script>
+    <script type="text/javascript" src="/static/ui.daterange.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/ui.daterange.css">
+  </head>
+  <body>
+    <form>
+      <div>This lets you set a start date and the number of days</div>
+      <input id="start1" type="text" value="2010-02-12">
+      <input id="days1" type="text" value="30">
+    </form>
+
+    <form>
+      <div>This lets you set a start date and an end date</div>
+      <input id="start2" type="text" value="2010-02-12">
+      <input id="end2" type="text" value="2010-03-11">
+    </form>
+
+    <script type="text/javascript">
+      (function($) {
+        $("#start1").daterange({ days: "#days1" });
+        $("#start2").daterange({ end: "#end2" });
+      })(jQuery);
+    </script>
+  </body>
+</html>
